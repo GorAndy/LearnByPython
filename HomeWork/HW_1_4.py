@@ -16,9 +16,9 @@ def people():
             print('Спасибо за ваше любопытство')
 
 
-
 def out_list():
-    '''Вывод списка документов в базе'''
+    """Вывод списка документов в базе"""
+    print()
     print('Список документов в базе: ')
     for record in documents:
         print ("Тип док.: {type}   Номер док.: {number}   Владелец док.: {name}".format(**record))
