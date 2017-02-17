@@ -101,16 +101,3 @@ directories = {
 
 
 separator()
-
-# num_doc = '11-2'
-# d = []
-# for k in directories.keys():
-#     d += directories[k]
-# if num_doc in d:
-#     print('yes')
-# else:
-#     print('no')
-#
-# print(d)
-# # for i in range(len(directories)):
-# #     print(i)
