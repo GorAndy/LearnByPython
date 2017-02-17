@@ -68,13 +68,14 @@ def add_to_list(num_doc):
     new_doc = {'type': new_rec[0], 'number': num_doc, 'name': new_rec[1]}
     documents.append(new_doc)
     directories[new_rec[2]] = [num_doc]
+    print()
     print("Документ с {} засунут на полку {}".format(num_doc, new_rec[2]))
-    print("Теперь список документов выглядит так:")
     out_list()
 
 
 def separator():
-    in_put = input('Введите команду \n').lower()
+    """Распознавание команды"""
+    in_put = input('Введите команду p, l, s или a \n').lower()
     if in_put == 'p':
         people()
     elif in_put == 'l':
