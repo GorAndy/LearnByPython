@@ -73,9 +73,21 @@ def add_to_list(num_doc):
     out_list()
 
 
+def del_record():
+    """Удаление записи по номеру документа"""
+    del_rec = input('Введите номер документа, который нужно удалить \n')
+    if base_number(del_rec):
+        for i in range(len(documents) - 1):
+            if documents[i]['number'] == del_rec:
+                del documents[i]
+    else:
+        print('Нет такого намера в базе')
+    out_list()
+
+
 def separator():
     """Распознавание команды"""
-    in_put = input('Введите команду p, l, s или a \n').lower()
+    in_put = input('Введите команду p, l, s, d или a \n').lower()
     if in_put == 'p':
         people()
     elif in_put == 'l':
@@ -84,6 +96,8 @@ def separator():
         shelf()
     elif in_put == 'a':
         shelf()
+    elif in_put == 'd':
+        del_record()
     else:
         print('Не правильная команда. Запустите еще раз')
 
