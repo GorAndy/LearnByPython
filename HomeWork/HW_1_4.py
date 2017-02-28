@@ -95,6 +95,7 @@ def separator():
     elif in_put == 's':
         shelf()
     elif in_put == 'a':
+        print("Проверим, есть ли документ с таким номером на полках \nЕсли не найдем, то добавим документ в базу")
         shelf()
     elif in_put == 'd':
         del_record()
