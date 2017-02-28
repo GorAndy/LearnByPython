@@ -37,20 +37,21 @@ def average_sex_scores(key, value):
 
 
 def hi_score_student():
-    """В отдельный список складываем id и среднюю оценку каждого студента, оттуда в список все оценки,
-    находим индекс максимальной оценки и id с таким индексом. По id находим имя и фамилию студента"""
+    """В отдельный список добавляем среднюю оценку каждого студента,
+    находим индекс максимальной оценки. По индексу находим имя и фамилию студента"""
     interim = []
     for i in range(len(students)):
-        interim.append([students[i]['ID'], students[i]['average_total_score_one']])
-    q = []
-    surname = []
-    for i in range(len(interim)):
-        q.append(interim[i][1])
-    for i in range(len(students)):
-        if students[i]['ID'] == interim[q.index(max(q))][0]:
-            surname.append(students[i]['surname'])
-            surname.append(students[i]['name'])
-    print("Наибольший балл {2:.2f} у студента {1} {0}".format(*surname, max(q)))
+        interim.append(students[i]['average_total_score_one'])
+    q_max = max(interim)
+    e = interim.index(max(interim))
+    name1 = students[e]['name'] + ' ' + students[e]['surname']
+    if interim.count(max(interim)) == 1:
+        print('У студента {} наибольший балл {}'.format(name1, q_max))
+    else:
+        for r in range(len(interim)):
+            if interim[r] == q_max:
+                name = students[r]['name'] + ' ' + students[r]['surname']
+                print('Студент {} получил максимальный балл {}'.format(name, q_max))
 
 
 students = [
