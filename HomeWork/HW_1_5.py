@@ -64,9 +64,9 @@ students = [
     {'ID': '23459', 'name': 'Sergey', 'surname': 'Vasiliev', 'sex': 'male',
     'prog_exp': 1, 'home_work_rating': [5, 3, 5, 5, 5], 'exam_rating': 5},
     {'ID': '23460', 'name': 'Vadim', 'surname': 'Svetlov', 'sex': 'male',
-    'prog_exp': 0, 'home_work_rating': [5, 10, 5, 7, 5], 'exam_rating': 7},
+    'prog_exp': 0, 'home_work_rating': [5, 10, 5, 10, 5], 'exam_rating': 10},
     {'ID': '23461', 'name': 'Sveta', 'surname': 'Ivanova', 'sex': 'female',
-    'prog_exp': 1, 'home_work_rating': [5, 10, 5, 10, 5], 'exam_rating': 8}
+    'prog_exp': 1, 'home_work_rating': [5, 10, 5, 10, 5], 'exam_rating': 1}
 ]
 
 average_score()
