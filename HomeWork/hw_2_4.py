@@ -1,4 +1,5 @@
-import os
+# -*- coding: utf-8 -*-
+import os.path
 import glob
 
 
@@ -9,13 +10,13 @@ def list_of_files(path):
 
 def search_in_list(strict, list_files):
     for file in list_files:
-        with open(file) as f:
+        with open(file, encoding='utf8') as f:
             if strict in f.read():
                 result_search.append(file)
     return result_search
 
 
-path = 'Migrations'
+path = './Migrations'
 result_search = []
 
 strict = input('Введите строку поиска: ')
