@@ -18,14 +18,10 @@ def search_in_list(strict, list_files):
 
 path = './Migrations'
 result_search = []
-
-strict = input('Введите строку поиска: ')
-search_before = search_in_list(strict, list_of_files(path))
-print(search_before)
-print('Total: ', len(search_before))
+search_before = list_of_files(path)
 
 while True:
-    strict = input('Введите строку поиска в результатах поиска: ')
+    strict = input('Введите строку поиска: ')
     result_search = []
     search_after = search_in_list(strict, search_before)
     print(search_after)
